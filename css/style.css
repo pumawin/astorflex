@@ -1,0 +1,378 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+.header-inner {
+  width: 88.43%;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 34px;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: 204px;
+  height: 57px;
+  background: url(../img/main-logo.svg) no-repeat 0 0 / contain;
+}
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  width: 41.67%;
+}
+nav > ul li a {
+  font-weight: 700;
+  color: #fff;
+  font-family: "pretendard";
+  font-size: 18px;
+  text-decoration: none;
+}
+.utill {
+  display: flex;
+  width: 171px;
+  justify-content: space-between;
+}
+
+.btn-call {
+  display: block;
+  background: url(../img/main-nav-call.svg) no-repeat 0 0 / contain;
+  width: 50px;
+  height: 50px;
+}
+.btn-mail {
+  display: block;
+  background: url(../img/main-nav-location.svg) no-repeat 0 0 / contain;
+  width: 50px;
+  height: 50px;
+}
+.btn-location {
+  display: block;
+  background: url(../img/main-nav-manssage.svg) no-repeat 0 0 / contain;
+  width: 50px;
+  height: 50px;
+}
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
+.visual {
+  height: 100%;
+  position: relative;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.visual-wrap {
+  position: relative;
+  height: 100%;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kategorie {
+  display: flex;
+  /* justify-content: space-between; */
+  margin-top: 46px;
+  gap: 20px;
+}
+.beenflex {
+  flex-direction: row-reverse;
+}
+
+.item-intro {
+  width: 49.48%;
+  position: relative;
+}
+.item-intro > figure {
+  width: 100%;
+  height: 100%;
+}
+.item-intro > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.item-info {
+  position: absolute;
+  margin: 93px 98px;
+  left: 0;
+  top: 0;
+}
+.item-info > p {
+  font-family: "Pretendard";
+  margin-top: 27px;
+  font-size: 24px;
+  font-weight: 400;
+  width: 79.01%;
+  color: #fff;
+}
+h2 {
+  font-weight: 600;
+  font-size: 55px;
+  font-family: "Pretendard";
+  color: #35651e;
+  text-align: center;
+}
+h3 {
+  font-family: "Agbalumo", system-ui;
+  font-size: 85px;
+  color: #fff;
+}
+h4 {
+  font-family: "Pretendard";
+  font-size: 42px;
+  font-weight: 700;
+  color: #5f3300;
+}
+.items {
+  display: flex;
+  margin: 7px 0 0 85px;
+  /* width: 49.48%; */
+}
+.items li {
+  width: 468px;
+  height: 630px;
+  background: #fff;
+  margin: 0 39px 0 0;
+}
+.items li figure {
+  width: 100%;
+  height: 100%;
+}
+.items li figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.container {
+  width: 49.48%;
+}
+.controller {
+  display: flex;
+  justify-content: space-between;
+  margin: 97px 0 0 101px;
+  width: 339px;
+  height: 50px;
+}
+.button-l {
+  background: url(../img/arrow-ico-l.svg) no-repeat 0 0 / contain;
+  width: 39px;
+  aspect-ratio: 1/1;
+}
+.button-r {
+  background: url(../img/arrow-ico-r.svg) no-repeat 0 0 / contain;
+  width: 39px;
+  aspect-ratio: 1/1;
+}
+.items li > p {
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Pretendard";
+}
+.material {
+  position: relative;
+  margin-top: 317px;
+}
+.mate-pic {
+  width: 61.45%;
+  display: flex;
+  justify-content: space-between;
+  margin: 45px 24px;
+  margin: 45px auto;
+  align-items: flex-end;
+}
+.mate-info {
+  display: flex;
+  justify-content: center;
+}
+.mate-info li {
+  width: 23.9%;
+}
+.mate-info li dl dt {
+  font-weight: 700;
+  font-size: 33px;
+  font-family: "Pretendard";
+}
+.mate-info li dl dd {
+  font-weight: 400;
+  font-size: 18px;
+  color: #666;
+  font-family: "Pretendard";
+  margin-top: 8px;
+}
+
+.material-button {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  left: 14%;
+  top: 50%;
+  position: absolute;
+  width: 72.4%;
+}
+.mate-l {
+  background: url(../img/meta-l.svg) no-repeat 0 0 / contain;
+  width: 64px;
+  aspect-ratio: 1/0.7901234567901235;
+}
+.mate-r {
+  background: url(../img/meta-r.svg) no-repeat 0 0 / contain;
+  width: 64px;
+  aspect-ratio: 1/0.7901234567901235;
+}
+.history {
+  width: 1180px;
+  margin: 0 auto;
+}
+.his-padding {
+  padding: 144px 0 0 0;
+}
+.history > figure {
+  margin-top: 80px;
+}
+
+article {
+  width: 100%;
+  background-color: #f3eedf;
+  margin-top: 70px;
+}
+
+article dl dt {
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Pretendard";
+  margin-top: 70px;
+  color: #333;
+}
+article dl dd {
+  width: 57.63%;
+  font-weight: 500;
+  line-height: 35px;
+  font-size: 20px;
+  color: #666;
+  padding: 32px 0 214px 0;
+}
+.core-container {
+  width: 73.17%;
+  margin: 168px auto;
+}
+.core-info dl {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 203px;
+}
+.core-info dl dt {
+  font-size: 140px;
+  color: #fff;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: rgba(95, 51, 0, 0.3);
+}
+.core-info dl dd {
+  width: 33%;
+  justify-content: right;
+  align-content: flex-end;
+}
+.core-info dl dd p {
+  margin-top: 30px;
+  line-height: 160%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #737373;
+}
+
+.phil-mid {
+  text-align: center;
+}
+.phil-mid > dl {
+  text-align: center;
+  display: block;
+}
+.phil-mid > dl dd {
+  width: 100%;
+  margin-top: 30px;
+
+  color: #737373;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.phil-reverse {
+  flex-direction: row-reverse;
+}
+
+.instar {
+  margin-top: 360px;
+}
+.instargram-pic {
+  animation: pic-ani s infinite linear;
+  display: flex;
+}
+.instargram-pic li {
+  margin: 55px 15px;
+}
+@keyframes pic-ani {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#footer {
+  background-color: rgba(95, 51, 0, 0.84);
+  text-align: center;
+}
+.footer-info {
+  padding: 93px 0;
+}
+.footer-info p {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Pretendard";
+}
+.footer-info figure {
+  margin: 38px auto;
+  width: 166px;
+  aspect-ratio: 1/0.9;
+}
+.footer-info figure img {
+  width: 100%;
+  height: 100%;
+}
+.footer-info strong {
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}
