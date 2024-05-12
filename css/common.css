@@ -1,0 +1,159 @@
+@charset 'utf-8';
+
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+:root {
+  --main-color: #5f3300;
+  --sub-text-color: #35651e;
+  --sub-bg-color: #fff6ed;
+  --sub-p-color: #666666;
+  --sub-p-color-darker: #333333;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+.header-inner {
+  width: 88.43%;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 34px;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: 204px;
+  height: 57px;
+  background: url(../img/main-logo.svg) no-repeat 0 0 / contain;
+}
+.logo2 {
+  display: block;
+  width: 204px;
+  height: 57px;
+  background: url(../img/sub-logo.svg) no-repeat 0 0 / contain;
+}
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  width: 41.67%;
+}
+nav > ul li a {
+  font-weight: 700;
+  color: #fff;
+  font-family: "pretendard";
+  font-size: 18px;
+  text-decoration: none;
+}
+.utill {
+  display: flex;
+  width: 171px;
+  justify-content: space-between;
+}
+
+.btn-call {
+  display: block;
+  background: url(../img/main-nav-call.svg) no-repeat 0 0 / contain;
+  width: 5rem;
+  height: 5rem;
+}
+.btn-mail {
+  display: block;
+  background: url(../img/main-nav-location.svg) no-repeat 0 0 / contain;
+  width: 5rem;
+  height: 5rem;
+}
+.btn-location {
+  display: block;
+  background: url(../img/main-nav-manssage.svg) no-repeat 0 0 / contain;
+  width: 5rem;
+  height: 5rem;
+}
+.btn-menu {
+  width: 5rem;
+  height: 5rem;
+  background: url(../img/main-nav-menu.svg) no-repeat 0 0 / contain;
+  display: none;
+}
+#footer {
+  background-color: rgba(95, 51, 0, 0.84);
+  text-align: center;
+}
+.footer-info {
+  padding: 9.3rem 0;
+}
+.footer-info p {
+  font-weight: 500;
+  font-size: 1.8rem;
+  font-family: "Pretendard";
+}
+.footer-info figure {
+  margin: 3.8rem auto;
+  width: 16.6rem;
+  aspect-ratio: 1/0.9;
+}
+.footer-info figure img {
+  width: 100%;
+  height: 100%;
+}
+.footer-info strong {
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .btn-menu {
+    display: block;
+  }
+  .btn-call {
+    display: none;
+  }
+  nav > ul {
+    display: none;
+  }
+  .utill {
+    width: 93px;
+  }
+}
+@media (max-width: 420px) {
+  .btn-menu {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
