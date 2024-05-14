@@ -8,15 +8,15 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header id="header">
@@ -28,13 +28,11 @@
           <h1 class="logo">
             <a href="#"><i class="hidden">logo</i></a>
           </h1>
-          <h1 class="logo2">
-            <a href="#"><i class="hidden">logo2</i></a>
-          </h1>
+
           <ul>
             <li><a href="#">Shops</a></li>
             <li><a href="#">Shops Online</a></li>
-            <li><a href="#">Second Life</a></li>
+            <li><a href="./secondlife.html">Second Life</a></li>
             <li><a href="#">Reserved Area</a></li>
           </ul>
 
@@ -76,7 +74,6 @@
               <div class="swiper-button-next"></div>
             </div>
             <div class="swiper-pagination"></div>
-
             <ul class="swiper-wrapper">
               <li class="swiper-slide">
                 <figure>
@@ -139,6 +136,7 @@
               <h4>Beenflex</h4>
               <div class="swiper-button-next"></div>
             </div>
+            <div class="swiper-pagination"></div>
             <ul class="swiper-wrapper">
               <li class="swiper-slide">
                 <figure>
@@ -185,7 +183,6 @@
             </ul>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
       <div class="kategorie">
         <div class="item-intro">
@@ -209,6 +206,8 @@
               <h4>Bitflex</h4>
               <div class="swiper-button-next"></div>
             </div>
+            <div class="swiper-pagination"></div>
+
             <ul class="swiper-wrapper">
               <li class="swiper-slide">
                 <figure>
@@ -276,7 +275,6 @@
             </ul>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
       <div class="material">
         <h2>Material</h2>
@@ -511,6 +509,15 @@
               <img src="./img/main-philosophy-1.png" alt="직원들 사진" />
             </figure>
           </div>
+          <div
+            class="responsible-pic2"
+            data-aos="fade-down"
+            data-aos-delay="500"
+          >
+            <figure>
+              <img src="./img/main-philosophy-1.png" alt="직원들 사진" />
+            </figure>
+          </div>
         </div>
 
         <div class="responsible-info" data-aos="fade-down" data-aos-delay="700">
@@ -518,11 +525,6 @@
             research into new materials and the study/design of ever-topical
             models now also involve the collaboration of famous designers.
           </p>
-        </div>
-        <div class="responsible-pic2">
-          <figure>
-            <img src="./img/main-philosophy-1.png" alt="직원들 사진" />
-          </figure>
         </div>
 
         <div class="philosophy2">
@@ -747,6 +749,9 @@
           </li>
         </ul>
       </div>
+      <script>
+        AOS.init();
+      </script>
     </main>
     <footer id="footer">
       <div class="footer-info">

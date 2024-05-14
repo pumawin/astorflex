@@ -9,10 +9,10 @@ $(function () {
       el: ".swiper-pagination",
       clickable: true,
     },
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -105,7 +105,7 @@ $(function () {
     }
   );
   new Vivus(
-    "secondlife",
+    "Secondlife",
     {
       duration: 100,
       type: "delayed",

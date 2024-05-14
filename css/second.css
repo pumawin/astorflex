@@ -5,28 +5,33 @@
   position: relative;
 }
 
-#secondlife {
+#Secondlife {
   width: 100%;
   height: 100%;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(50%, 50%); */
   /* position: absolute; */
 }
-#secondlife * {
+#Secondlife {
   stroke-linecap: square;
   fill-opacity: 0;
   transition: fill-opacity 0.5s;
 }
-#secondlife.finished * {
+#Secondlife.finished {
   fill-opacity: 1;
   stroke: #e0c6b2;
 }
 .second-visual {
+  margin-top: 9rem;
   display: flex;
-  width: 57%;
-  padding: auto 148.66px;
+  width: 100%;
 }
 .second-name-life {
   display: block;
-  width: 100%;
+  margin: 10% auto;
+  /* padding: auto 148.66px; */
+  /* width: 100%; */
 }
 .second-name-life .secondname {
   width: 100%;
@@ -49,6 +54,7 @@
 .second-subject {
   font-family: "pretendard";
   text-align: center;
+  margin-top: 10%;
 }
 h2 {
   font-size: 5rem;
@@ -59,6 +65,7 @@ h2 {
   font-size: 2.5rem;
   font-weight: 500;
   color: var(--sub-p-color);
+  margin-top: 1.3rem;
 }
 .second-materials {
   margin: 21rem auto;
@@ -77,6 +84,7 @@ h2 {
   font-weight: 600;
   font-family: "pretendard";
   font-size: 5rem;
+  text-align: left;
 }
 .second-mate-title h3 + h3 {
   color: #fff;
@@ -137,6 +145,9 @@ h4 {
 .second-clean-leather ul li > p span {
   font-weight: 600;
 }
+.second-suade-upper .second-mate-title {
+  left: 23.5%;
+}
 .second-suade-upper {
   width: 100%;
 }
@@ -168,8 +179,23 @@ h4 {
 .upper-inner ul li > p span {
   font-weight: 600;
 }
+.second-sub-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 10.4081%;
+}
+.second-sub-logo figure {
+  aspect-ratio: 1/0.2449;
+  width: 42.6rem;
+}
+.second-sub-logo img {
+  width: 100%;
+  height: 100%;
+}
+
 .tip-swiper {
   width: 59rem;
+  margin-top: -3rem;
   /* height: calc(100% - 60px); */
 }
 .tip-swiper .swiper-container {
@@ -179,10 +205,8 @@ h4 {
 }
 
 .tip-swiper .swiper-pagination {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
+  position: relative;
+  margin-top: -6rem;
 }
 .tip-swiper .swiper-pagination-bullet {
   width: 18px;
@@ -231,8 +255,22 @@ h4 {
   position: relative;
 }
 .second-tips {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 130rem;
 }
-.tip-swiper {
+.second-maintenance-tips .second-mate-title {
+  position: relative;
+  transform: none;
+  right: 0;
+  margin-top: 10.4081%;
+}
+.second-mate-title > .stroke {
+  -webkit-text-stroke: 1px #000;
+}
+.second-maintenance-tips h3 {
+  text-align: center;
 }
 .tip-swiper .swiper-slide figure {
   height: 100%;
@@ -244,37 +282,46 @@ h4 {
   height: 100%;
 }
 
-.swiper-slide figure p {
-  font-weight: 600;
-  font-size: 2rem;
-  font-family: "Pretendard";
-  margin-right: 2.5rem;
+.slide-info p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  /* margin-right: 2.5rem; */
+  text-align: left;
+  width: 90%;
+  color: #fff;
+  opacity: 0.7;
+  margin-top: 1rem;
 }
 
-.tip-swiper h4 {
-  text-align: center;
-  display: inline-block;
-  position: absolute;
-  width: 18.3rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.slide-info h4 {
+  text-align: left;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2.5rem;
 }
 .second-tips-arrow {
   position: absolute;
-  width: 33.9rem;
-  top: 16.5%;
-  left: 11.7%;
+  width: 70.8rem;
+  top: 40rem;
+  right: 24rem;
+  z-index: 2;
+}
+.mySwiper3 .slide-info {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 13rem;
+  padding: 2.2rem 0 0 4.4rem;
+  font-family: "Pretendard";
 }
 .second-tips-arrow .swiper-button-next {
-  background: url(../img/arrow-ico-r.svg) no-repeat 0 0 / cover;
+  background: url(../img/second-svg-r.svg) no-repeat 0 0 / cover;
   background-position: center;
   width: 3.9rem;
   height: 3.9rem;
   right: 0;
 }
 .second-tips-arrow .swiper-button-prev {
-  background: url(../img/arrow-ico-l.svg) no-repeat 0 0 / cover;
+  background: url(../img/second-svg-l.svg) no-repeat 0 0 / cover;
   background-position: center;
   width: 3.9rem;
   height: 3.9rem;
@@ -284,4 +331,7 @@ h4 {
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
+}
+#footer {
+  margin-top: 20rem;
 }

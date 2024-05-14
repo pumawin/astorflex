@@ -411,6 +411,7 @@ article dl dd {
   stroke: #5f3300;
 }
 .responsible-pic {
+  display: block;
   width: 38.4346%;
   aspect-ratio: 1/0.2945;
   justify-content: right;
@@ -424,6 +425,9 @@ article dl dd {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.responsible-pic2 {
+  display: none;
 }
 .responsible-info {
   display: flex;
@@ -525,13 +529,15 @@ article dl dd {
 }
 .instar {
   margin-top: 36.7346%;
+  overflow: hidden;
 }
 .instargram-pic {
-  animation: pic-ani 25s infinite linear;
+  animation: pic-ani 80s infinite linear;
   display: flex;
+  width: 800rem;
 }
 .instargram-pic li {
-  margin: 5.6122% 0.78%;
+  margin: 1% 0.1%;
   width: 38rem;
 }
 /* .instargram-pic li figure {
@@ -565,8 +571,12 @@ article dl dd {
   /* .history {
     width: 84.2857%;
   } */
+  .instargram-pic {
+    width: 600rem;
+    animation: pic-ani 80s infinite linear;
+  }
   .instargram-pic li img {
-    width: 36rem;
+    width: 27rem;
     max-width: 100%;
     height: auto;
   }
@@ -648,6 +658,15 @@ article dl dd {
   }
   .all-items-arrow .swiper-button-next {
     display: none;
+  }
+  .instargram-pic {
+    width: 400rem;
+    animation: pic-ani 80s infinite linear;
+  }
+  .instargram-pic li img {
+    width: 20rem;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -814,5 +833,7 @@ article dl dd {
   }
   .all h4 {
     left: 50%;
+  }
+  @media (max-width: 390px) {
   }
 }
