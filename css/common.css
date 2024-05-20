@@ -24,6 +24,9 @@ body {
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration-line: none;
+}
 .scroll::-webkit-scrollbar {
   display: none;
 }
@@ -105,12 +108,87 @@ nav > ul li a {
   width: 5rem;
   height: 5rem;
 }
+.all-menu {
+  display: none;
+  position: fixed;
+  top: -100%;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(95, 51, 0, 0.9);
+  padding: 60px;
+  transition: 0.35s;
+  z-index: 1000;
+}
+
+.all-menu.active {
+  top: 0%;
+}
+
+.menu {
+  text-align: center;
+  vertical-align: center;
+  padding: 150px 50px;
+  font-size: 35px;
+}
+
+.menu li a {
+  color: #fff;
+  margin-top: 2rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: "pretendard";
+  font-weight: 600;
+  opacity: 0.7;
+}
+
 .btn-menu {
+  display: none;
+  position: relative;
   width: 5rem;
   height: 5rem;
-  background: url(../img/main-nav-menu.svg) no-repeat 0 0 / contain;
+  z-index: 1000;
+}
+
+.btn-menu b {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  /* transform: translate(-50%, -50%); */
+  width: 100%;
+  height: 100%;
+  background: url(../img/list-icon.svg) no-repeat 0 0 / contain;
+  /* text-indent: -999px; */
+  /* overflow: hidden; */
+  border-radius: 50px;
+}
+.btn-menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  /* transform: translateX(-50%); */
+  width: 100%;
+  height: 100%;
+  background: url(../img/x2-icon.svg) no-repeat 0 0 / contain;
+  /* transition: 0.35s; */
+  border-radius: 50px;
+  display: none;
+  z-index: 1;
+}
+/* .btn-menu.black::after {
+  background: #000;
+} */
+
+/* active 클래스가 생기면  */
+.btn-menu.active b {
   display: none;
 }
+.btn-menu.active::after {
+  display: block;
+}
+
 #footer {
   background-color: rgba(95, 51, 0, 0.84);
   text-align: center;
@@ -138,7 +216,19 @@ nav > ul li a {
   text-align: center;
 }
 @media (max-width: 1024px) {
+  .utill {
+    width: 5rem;
+  }
+  .btn-location {
+    display: none;
+  }
   .btn-menu {
+    display: block;
+  }
+  .btn-menu > i {
+    display: block;
+  }
+  .all-menu {
     display: block;
   }
   .btn-call {
@@ -147,13 +237,13 @@ nav > ul li a {
   nav > ul {
     display: none;
   }
-  .utill {
-    width: 93px;
-  }
 }
 @media (max-width: 420px) {
   .btn-menu {
     width: 4.5rem;
     height: 4.5rem;
+  }
+  .utill {
+    width: 4.5rem;
   }
 }

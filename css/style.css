@@ -31,6 +31,7 @@ video {
 .item-intro > figure {
   width: 100%;
   height: 100%;
+  aspect-ratio: 1/0.9684;
 }
 .item-intro > figure img {
   width: 100%;
@@ -72,20 +73,22 @@ h4 {
 }
 .all {
   width: 49.48%;
-  /* height: calc(100% - 60px); */
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1/0.9684;
 }
 .all .swiper-container {
   display: block;
   width: 91.4736%;
-  margin-left: auto;
+  margin: 0 0 0 8.5264%;
   position: relative;
-  overflow: hidden;
 }
 
-.kategorie .swiper-pagination {
+.swiper-container > .swiper-pagination {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -20%;
   z-index: 10;
 }
 .kategorie .swiper-pagination-bullet {
@@ -103,6 +106,16 @@ h4 {
   background: #5f3300;
   opacity: 1;
 }
+.all .white-bg {
+  content: "";
+  width: 8.5264%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
 .all .swiper-wrapper {
   transform: scaleY(-136px);
   width: 100%;
@@ -113,22 +126,13 @@ h4 {
 .all .swiper-slide {
   margin-top: 0.7rem;
   background: #fff;
-  /* background: #04f3d3; */
-  /* height: 62.0271%; */
-  /* width: 49.2631%; */
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  /* -webkit-box-pack: center; */
   -ms-flex-pack: center;
-  /* -webkit-justify-content: center; */
-  /* justify-content: center; */
   -webkit-box-align: center;
   -ms-flex-align: center;
-  /* -webkit-align-items: center; */
-  /* align-items: center; */
 }
 
 .all .swiper-slide figure {
@@ -153,6 +157,7 @@ h4 {
   display: inline-block;
   position: absolute;
   width: 18.3rem;
+  z-index: 100;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -160,8 +165,8 @@ h4 {
 .all-items-arrow {
   position: absolute;
   width: 33.9rem;
-  top: 16.5%;
-  left: 11.7%;
+  top: -5%;
+  left: 0%;
 }
 .all-items-arrow .swiper-button-next {
   background: url(../img/arrow-ico-r.svg) no-repeat 0 0 / cover;
@@ -191,14 +196,13 @@ h4 {
   overflow: hidden;
 }
 .main-container {
-  margin-top: 8rem;
+  margin-top: -9vw;
 }
 .main-container .swiper-container {
   width: 61.4583%;
   margin: 0 auto;
   overflow: hidden;
-  height: 40rem;
-  /* height: 40.8163%; */
+  height: 40.5102vw;
 }
 
 .main-container .swiper-slide {
@@ -225,7 +229,6 @@ h4 {
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  /* justify-content: center; */
 }
 
 .changing {
@@ -314,14 +317,14 @@ h4 {
 
 .material {
   position: relative;
-  margin-top: 32.3469%;
+  margin-top: 32.3469vh;
+  height: 100%;
 }
 .mate-pic {
   width: 61.45%;
   display: flex;
   justify-content: space-between;
-  /* margin: 45px 24px; */
-  margin: 45px auto;
+
   align-items: flex-end;
 }
 .main-mate-arrow {
@@ -348,7 +351,6 @@ h4 {
   left: 0;
 }
 .history {
-  /* width: 1180px; */
   width: 61.4583%;
   margin: 0 auto;
 }
@@ -399,7 +401,6 @@ article dl dd {
 #responsible {
   width: 100%;
   height: 100%;
-  /* position: absolute; */
 }
 #responsible * {
   stroke-linecap: square;
@@ -436,7 +437,6 @@ article dl dd {
 }
 .responsible-info p {
   position: absolute;
-  /* margin-top: 30px; */
   line-height: 160%;
   font-size: 2.4rem;
   font-weight: 500;
@@ -452,7 +452,6 @@ article dl dd {
 #Transparent {
   width: 100%;
   height: 100%;
-  /* position: absolute; */
 }
 #Transparent * {
   stroke-linecap: square;
@@ -488,7 +487,6 @@ article dl dd {
 #Sagacious {
   width: 100%;
   height: 100%;
-  /* position: absolute; */
 }
 #Sagacious * {
   stroke-linecap: square;
@@ -528,7 +526,7 @@ article dl dd {
   color: #737373;
 }
 .instar {
-  margin-top: 36.7346%;
+  margin-top: 20vw;
   overflow: hidden;
 }
 .instargram-pic {
@@ -540,15 +538,6 @@ article dl dd {
   margin: 1% 0.1%;
   width: 38rem;
 }
-/* .instargram-pic li figure {
-  width: 100%;
-  height: 100%; */
-
-/* .instargram-pic li figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-} */
 
 @keyframes pic-ani {
   100% {
@@ -568,9 +557,6 @@ article dl dd {
   }
 }
 @media (max-width: 1400px) {
-  /* .history {
-    width: 84.2857%;
-  } */
   .instargram-pic {
     width: 600rem;
     animation: pic-ani 80s infinite linear;
@@ -581,16 +567,7 @@ article dl dd {
     height: auto;
   }
 }
-@media (max-width: 1397px) {
-  .main-container {
-    margin-top: -2rem;
-  }
-}
-@media (max-width: 1257px) {
-  .main-container .swiper-container {
-    height: 33rem;
-  }
-}
+
 @media (max-width: 1190px) {
   .slide-info li dl dt {
     font-size: 30px;
@@ -599,7 +576,7 @@ article dl dd {
     width: 100%;
   }
   .all-items-arrow {
-    width: 27.9rem;
+    width: 26.3rem;
   }
   h4 {
     font-size: 3.7rem;
@@ -614,6 +591,7 @@ article dl dd {
   }
   .Transparent-info p {
     font-size: 1.9rem;
+    text-align: center;
   }
   .Sagacious-info p {
     font-size: 1.9rem;
@@ -629,20 +607,21 @@ article dl dd {
     overflow: hidden;
   }
 }
-@media (max-width: 1055px) {
-  .main-container .swiper-container {
-    height: 33rem;
-  }
-}
+
 @media (max-width: 1024px) /* 태블릿 사이즈 */ {
-  .main-container {
-    margin-top: 4rem;
-  }
   .main-container .swiper-container {
     width: 95.4583%;
   }
+  .main-container {
+    margin-top: 2vw;
+  }
   .main-mate-arrow {
     display: none;
+  }
+  .all h4 {
+    text-align: left;
+    left: 0;
+    transform: translate(0, -50%);
   }
   .slide-info li {
     width: 37.9062%;
@@ -669,15 +648,10 @@ article dl dd {
     height: auto;
   }
 }
-
-@media (max-width: 965px) {
-  .main-container .swiper-container {
-    height: 34rem;
-  }
+@media (max-width: 807px) {
 }
 @media (max-width: 768px) {
   .all h4 {
-    left: 24%;
     font-size: 3.3rem;
   }
   h3 {
@@ -686,19 +660,16 @@ article dl dd {
   .item-info > p {
     font-size: 1.8rem;
   }
-  .main-container {
-    margin-top: 0;
-  }
 }
-@media (max-width: 807px) {
-  .main-container {
-    margin-top: -3rem;
+@media (max-width: 747px) {
+  .swiper-slide figure p {
+    font-size: 1.8rem;
+  }
+  .material {
+    margin-top: 20vh;
   }
 }
 @media (max-width: 702px) {
-  .main-container {
-    margin-top: -8rem;
-  }
   .visual {
     aspect-ratio: 16/15;
   }
@@ -707,22 +678,79 @@ article dl dd {
     height: 100%;
   }
 }
-@media (max-width: 565px) {
-  .main-container {
-    margin-top: -14rem;
+@media (max-width: 693px) {
+  .slide-info li {
+    width: 50%;
   }
 }
-@media (max-width: 468px) {
+@media (max-width: 604px) {
+  .material {
+    position: relative;
+    overflow: hidden;
+    height: 89vh;
+  }
   .main-container {
-    margin-top: -17rem;
+    margin-top: 56vw;
+    height: 70vh;
+  }
+  .main-container .swiper-container {
+    width: 200%;
+    position: absolute;
+    top: 36vw;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+    height: 60rem;
+  }
+
+  .all .swiper-container {
+    width: 90%;
+  }
+
+  .slide-info {
+    margin-top: -52vh;
+  }
+  .slide-info li {
+    width: 85%;
+    height: 20vw;
+  }
+  .kategorie {
+    display: block;
+  }
+  .item-intro {
+    width: 100%;
+  }
+  .all {
+    width: 100%;
+  }
+
+  .history {
+    width: 85%;
+  }
+  article {
+    margin-top: -9rem;
   }
 }
+@media (max-width: 519px) {
+  .slide-info {
+    margin-top: -57vh;
+  }
+}
+@media (max-width: 511px) {
+  .material {
+    margin-top: 11vh;
+  }
+  article {
+    margin-top: -11rem;
+  }
+}
+
 @media (max-width: 420px) {
   .history {
     width: 85%;
   }
   article {
-    margin-top: 319px;
+    margin-top: -7rem;
   }
   article dl dt {
     font-size: 26px;
@@ -737,6 +765,9 @@ article dl dd {
   .history > figure {
     margin-top: 10%;
   }
+  .philosophy {
+    width: 85%;
+  }
 
   .responsible-pic {
     display: none;
@@ -744,7 +775,7 @@ article dl dd {
   .responsible-info p {
     display: block;
     width: 100%;
-    margin-top: 35%;
+    margin-top: 3%;
     line-height: 115%;
   }
   .philosophy1 {
@@ -769,6 +800,7 @@ article dl dd {
   .Transparent-info p {
     font-size: 1.8rem;
     line-height: 100%;
+    text-align: left;
   }
   .philosophy3 {
     display: block;
@@ -785,7 +817,6 @@ article dl dd {
     display: inline-block;
     font-size: 1.8rem;
     margin-top: 14px;
-    /* width: 85%; */
     line-height: 100%;
     left: 0;
   }
@@ -796,44 +827,10 @@ article dl dd {
   .core-philosophy {
     width: 85%;
   }
-
-  .main-container .swiper-container {
-    width: 200%;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    display: block;
-    transform: translate(-50%, -50%);
+  .instar {
+    margin-top: 40vw;
   }
 
-  .all .swiper-container {
-    width: 100%;
-  }
-  .slide-info li {
-    width: 84.9062%;
-    margin-top: 30%;
-  }
-  .main-container {
-    /* display: flex;
-    justify-content: center; */
-    /* align-items: center; */
-    /* display: block; */
-    overflow: hidden;
-    margin: 25% auto;
-  }
-
-  .kategorie {
-    display: block;
-  }
-  .item-intro {
-    width: 100%;
-  }
-  .all {
-    width: 100%;
-  }
-  .all h4 {
-    left: 50%;
-  }
   @media (max-width: 390px) {
   }
 }

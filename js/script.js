@@ -1,4 +1,30 @@
 $(function () {
+  const $allMenu = $(".all-menu");
+  const $btnMenu = $(".btn-menu");
+  var ts;
+  $(this).bind("touchstart", function (e) {
+    e.stopPropagation();
+    ts = e.originalEvent.touches[0].clientY;
+  });
+  if ($(window).width() < 1024) {
+    $btnMenu.on("click", function (e) {
+      e.preventDefault();
+      $(this).add($allMenu).toggleClass("active");
+    }),
+      $(this).bind("touchend", function (e) {
+        e.stopPropagation();
+        var te = e.originalEvent.changedTouches[0].clientY;
+        if (ts > te + 2) {
+          $(this).add($allMenu).removeClass("active"),
+            $(this).add($btnMenu).removeClass("active");
+        }
+      });
+  } else {
+    $btnMenu.on("click", function (e) {
+      e.preventDefault();
+      $(this).add($allMenu).toggleClass("active");
+    });
+  }
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 2,
     spaceBetween: 26.99,
@@ -9,10 +35,10 @@ $(function () {
       el: ".swiper-pagination",
       clickable: true,
     },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -34,6 +60,7 @@ $(function () {
     on: {
       init: function () {
         $(".swiper-slide").addClass("changed");
+        updateSlideHeight();
       },
       slideChangeTransitionStart: function () {
         $(".swiper-slide").addClass("changing");
@@ -53,6 +80,26 @@ $(function () {
       },
     },
   });
+  window.addEventListener("resize", updateSlideHeight);
+
+  // 슬라이드 높이 업데이트 함수
+  function updateSlideHeight() {
+    const swiperContainer = document.querySelector(
+      ".main-container .swiper-container"
+    );
+    var windowWidth = $(window).width();
+    if (windowWidth < 604) {
+      if (swiperContainer) {
+        const newHeight = window.innerWidth * 1;
+        swiperContainer.style.height = `${newHeight}px`;
+      }
+    } else {
+      if (swiperContainer) {
+        const newHeight = window.innerWidth * 0.34;
+        swiperContainer.style.height = `${newHeight}px`;
+      }
+    }
+  }
 
   new Vivus(
     "responsible",

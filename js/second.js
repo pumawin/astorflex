@@ -1,4 +1,30 @@
 $(function () {
+  const $allMenu = $(".all-menu");
+  const $btnMenu = $(".btn-menu");
+  var ts;
+  $(this).bind("touchstart", function (e) {
+    e.stopPropagation();
+    ts = e.originalEvent.touches[0].clientY;
+  });
+  if ($(window).width() < 1024) {
+    $btnMenu.on("click", function (e) {
+      e.preventDefault();
+      $(this).add($allMenu).toggleClass("active");
+    }),
+      $(this).bind("touchend", function (e) {
+        e.stopPropagation();
+        var te = e.originalEvent.changedTouches[0].clientY;
+        if (ts > te + 2) {
+          $(this).add($allMenu).removeClass("active"),
+            $(this).add($btnMenu).removeClass("active");
+        }
+      });
+  } else {
+    $btnMenu.on("click", function (e) {
+      e.preventDefault();
+      $(this).add($allMenu).toggleClass("active");
+    });
+  }
   var swiper = new Swiper(".mySwiper3", {
     slidesPerView: 1,
     slidesPerGroup: 1,
