@@ -204,7 +204,7 @@ nav > ul li a {
 .footer-info figure {
   margin: 3.8rem auto;
   width: 16.6rem;
-  aspect-ratio: 1/0.9;
+  aspect-ratio: 1/1;
 }
 .footer-info figure img {
   width: 100%;
